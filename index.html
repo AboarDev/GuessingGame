@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Guessing Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta name = 'viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <nav class="navbar navbar-dark bg-dark">
+  <h2 class="navbar-brand">Guessing Game</h2>
+  </nav>
+	<div id="app" class="container">
+    <div class="row">
+      <div class="col-sm"></div>
+      <div  class="col-sm-8">
+      
+      <chose-game v-if="chosen == 0" v-on:selected='input'></chose-game>
+      
+      <games-1-2 v-if='chosen == 1||chosen == 2' v-bind:type='chosen'></games-1-2>
+      
+      <games-3 v-if='chosen == 3'></games-3>
+      
+      <games-4 v-if='chosen == 4'></games-4>
+      
+      <br>
+      
+      <input type='button' value='Exit/Reset' v-show='inputDisabled' v-on:click='chosen = 0' class="btn btn-primary">
+      </div>
+      <div class="col-sm"></div>
+    </div>
+	</div>
+	<script src='main.js'></script>
+</body>
+</html>

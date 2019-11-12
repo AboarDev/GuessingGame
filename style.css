@@ -1,0 +1,30 @@
+body{
+	font-family: 'segoe ui', 'arial', 'sans-serif';
+}
+#app{
+	max-width:30rem;
+	padding:0.5rem;
+}
+input[type=range]{
+	width:100%;
+}
+input[type=button]{
+	background-color:#000000;
+	color:white;
+	border:none;
+	padding:0.5rem;
+}
+input[type=button]:disabled{
+	background-color:#797979;
+}
+.box{
+  border: 1px solid black;
+  padding: 1rem;
+  width: 
+}
+.box > h3{
+  margin-top:0px;
+}
+.box > p{
+  font-weight:bold;
+}
